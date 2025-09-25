@@ -14,49 +14,85 @@
 
 /* Estilos generales */
 body {
-    font-family: var(--font-main);
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-    align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
 }
 
-/* Encabezado */
-h1{
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    justify-content: center;
-    
-}
-h3{
-    color:black;
-    margin-bottom: 1rem;
-    justify-content: flex-start
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-
-
-
-/* Contenedores principales */
+/* Contenedor principal del producto */
 .producto {
-    /* max-width: ;*/
-    margin: 0 auto;
-    padding: 2rem;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    display: grid;
-    background-color: aquamarine;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(41, 94, 173, 0.596);
+  box-shadow: 0 4px 12px rgba(2, 6, 75, 0.699);
+}
+.producto .precio {
+  color: #26008f; /* azul brillante para destacar el precio */
+}
+/* Encabezado con flex para texto a la izquierda y imagen a la derecha */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-.producto img {
-    max-width: 100%;
-    height: 200px;
-    border-radius: 4px;
-    justify-content: center;
+/* La parte de texto ocupa el lado izquierdo */
+.texto {
+  flex: 1;
+  
+}
+.texto h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #000746;
+  text-align: center;   /* Centra horizontalmente el texto */
 }
 
-.producto p {
-    margin-top: 1rem;
-    text-align: left;
+/* Imagen a la derecha con tamaño fijo */
+.imagen img {
+  max-width: 175px;
+  border-radius: 8px;
 }
 
+/* Información de precio y detalles */
+.info {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Centrar el botón de compra */
+.boton-centro {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buy-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #069797;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background: #005fa3;
+}
